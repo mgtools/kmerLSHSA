@@ -1,8 +1,8 @@
 # kmerLSHSA
 
 <p align="center">
-  <img src="kmerLSHSA_pipeline.pdf" width="40%"/>
- </p>
+  <img src="kmerLSHSA_pipeline.png" width="50%"/>
+</p>
 
 kmerLSHSA is the latest subtractive assembly approach for extracting differential reads from differential genes/genomes. If your metagenome sequencing data has two groups (healthy vs disease) and your goal is to find the differential abundant genes/genomes related with the phenotypes, kmerLSHSA is good option to analyze. kmerLSHSA can extract the only differential reads based on the k-mers' abundance profiling information. You don't need to use whole raw files for binning or gene prediction. 
 
@@ -16,7 +16,7 @@ Furthermore, we provide already trained model with 4 disease datasets(livercirrh
 
 ## Installation
 ```
-1. git clone 
+1. git clone https://github.com/mgtools/kmerLSHSA.git
 2. move the kmerLSHSA directory
 3. make
 ```
@@ -31,7 +31,7 @@ If you want to re-install kmerLSHSA, then
 
 ## Usage
 ```
-./bin/kmerLSHSA -a input1 -b input2 -o output1_prefix -p output2_prefix -k 23 [options]
+./kmerLSHSA -a input1 -b input2 -o output1_prefix -p output2_prefix -k 23 [options]
 ```
 
   * -a, --input1=STRING (required)
@@ -87,13 +87,17 @@ If you want to re-install kmerLSHSA, then
 
 ## Input files
 The input files require the location of sequence files(.fq) and their names (or ID). The input files are tab-delimited. 
-
+```
+seq1_loc\tgroup1_seq1
+seq2_loc\tgroup1_seq2
+...
+```
     
 ## Output files
 Output files are sequence files(.fq) consist of differential reads. With these output files, you can do analysis such as binning, gene prediction or genome estimation.
 
 
-
+<!--
 ## Examples
 ### Download simulated datasets
 ```
@@ -101,24 +105,27 @@ Output files are sequence files(.fq) consist of differential reads. With these o
 ```
 ### Run kmerLSHSA
 
-
-
+```
+./kmerLSHSA -a -b -o -p 
+```
 
 
 
 ## Machine learning scripts
-We analyzed the 4 different disease data sets and built classifier models. We provide these models for re-using.  
+We analyzed the 4 different disease data sets and built classifier models. We provide these models for re-using.   
+### Download the predicted genes
+```
 
-
-
-
+```
+### Use trained model for classification
+Mi2Pr()
 
 
 
 
 ## Citation
 
-
+-->
 
 ## Questions
 Please contact Wontack Han(wthanone@gmail.com) for assistance.

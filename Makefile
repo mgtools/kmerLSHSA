@@ -51,7 +51,7 @@ $(KMC_API_DIR)/%.o: $(KMC_API_DIR)/%.cpp
 $(ALGLIB_DIR)/%.o: $(ALGLIB_DIR)/%.cpp
 	$(CXX) $(CXXFLAGS2) -c $< -o $@
 
-bin/kmerLSHSA: src/app/kmerLSH.cc $(KMER_OBJS) $(UTIL_OBJS) $(HASH_OBJS) $(IO_OBJS) $(FUNC_OBJS) $(KMC_API_OBJS) $(ALGLIB_OBJS)
+kmerLSHSA: src/app/kmerLSH.cc $(KMER_OBJS) $(UTIL_OBJS) $(HASH_OBJS) $(IO_OBJS) $(FUNC_OBJS) $(KMC_API_OBJS) $(ALGLIB_OBJS)
 	$(CXX) -o $@ $^ $(INC) $(LIBS) $(CXXLINK)
 
 clean: 
@@ -62,9 +62,9 @@ clean:
 	-rm -f $(FUNC_DIR)/*.o
 	-rm -f $(KMC_API_DIR)/*.o
 	-rm -f $(ALGLIB_DIR)/*.o
-	-rm -f bin/kmerLSHSA
+	-rm -f kmerLSHSA
 
-all: bin/kmerLSHSA
+all: kmerLSHSA
 
 
 
