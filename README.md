@@ -1,7 +1,7 @@
 # kmerLSHSA
 
 <p align="center">
-  <img src="kmerLSHSA_pipeline.png" width="50%"/>
+  <img src="kmerLSHSA_pipeline.png" width="80%"/>
 </p>
 
 kmerLSHSA is the latest subtractive assembly approach for extracting differential reads from differential genes/genomes. If your metagenome sequencing data has two groups (healthy vs disease) and your goal is to find the differential abundant genes/genomes related with the phenotypes, kmerLSHSA is good option to analyze. kmerLSHSA can extract the only differential reads based on the k-mers' abundance profiling information. You don't need to use whole raw files for binning or gene prediction. 
